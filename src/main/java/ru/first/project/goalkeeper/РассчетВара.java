@@ -1,53 +1,91 @@
 package ru.first.project.goalkeeper;
 
-import javax.swing.text.Position;
-
 public class РассчетВара {
-    public int RandomChance() {
+    public int randomChance() {
 
-        int random =1 + (int) (Math.random() * 101);
+        int random = 1 + (int) (Math.random() * 101);
 
         System.out.println("Шанс стойки" + random);
 
         return random;
     }
-    public int position(int RandomChance, int Butterfly , int StandUp) {
 
-        if ( RandomChance < 30){
-           Goalkeeper.setButterfly();
-        }else
-
+    public Goalkeeper position(Goalkeeper goalkeeper) {
+        int random = randomChance();
+        if (random < 30) {
+            goalkeeper.setPosition("Butterfly");
+        } else {
+            goalkeeper.setPosition("StanUp");
+        }
+        return goalkeeper;
     }
-    public void Характеристики(Goalkeeper goalkeeper){
-        int Butterfly=goalkeeper.setButterfly();
-        if (Position==Butterfly){
+
+    public Goalkeeper Рассчет() {
+        Goalkeeper goalkeeper = new Goalkeeper();
+
+        goalkeeper = position(goalkeeper);
+
+        return goalkeeper;
+    }
+
+    public Goalkeeper характеристики(Goalkeeper goalkeeper) {
+        String position = goalkeeper.getPosition();
+        if (position == "Butterfly") {
+            int PlayHome = goalkeeper.getHome() + 10;
+
+            int PlayLeftDown = goalkeeper.getLeftDown() + 10;
+
+            int PlayRightDown = goalkeeper.getRightDown() + 10;
+
+            int PlayLeftUp = goalkeeper.getLeftUp() - 10;
+
+            int PlayRightUp = goalkeeper.getRightUp() - 10;
+
+            int Speed = goalkeeper.getSpeed() - 10;
+
+            goalkeeper.setHome(PlayHome);
+
+            goalkeeper.setLeftDown(PlayLeftDown);
+
+            goalkeeper.setRightDown(PlayRightDown);
+
+            goalkeeper.setSpeed(Speed);
+
+            goalkeeper.setLeftUp(PlayLeftUp);
+
+            goalkeeper.setRightUp(PlayRightUp);
+        } else {
+            int PlayHome = goalkeeper.getHome() - 10;
+
+            int PlayLeftDown = goalkeeper.getLeftDown() - 10;
+
+            int PlayRightDown = goalkeeper.getRightDown() -10;
+
+            int PlayLeftUp = goalkeeper.getLeftUp() + 10;
+
+            int PlayRightUp = goalkeeper.getRightUp() + 10;
+
+            int Speed = goalkeeper.getSpeed() + 10;
+
+            goalkeeper.setHome(PlayHome);
+
+            goalkeeper.setLeftDown(PlayLeftDown);
+
+            goalkeeper.setRightDown(PlayRightDown);
+
+            goalkeeper.setSpeed(Speed);
+
+            goalkeeper.setLeftUp(PlayLeftUp);
+
+            goalkeeper.setRightUp(PlayRightUp);
 
         }
-
-
+        return goalkeeper;
     }
-
-
 }
 
-
-//метод Вратарь рассчитатьВратаря(String позиция){
-//if(позиция равна батерфляй){
-//ловушка - 10
-//бла бла + 10
-//} if else{
-//ловушка +10
-//бла бла - 10
-//}
 //} Если стойка Butterfly - то вратарь имеет +10% к защите по низу и домика и -10% к защите верха.
 // Скорость перемещения -10%
 //
 // Если стойка StandUp - то вратарь имеет +10% к защите верха и -10% к защите по низу и домика.
 // Скорость перемещения +10%
-// (Forward forward) {
-//
-//        int Butterfly = Goalkeeper.getButterfly();
-
-//public int точностьНападения(Forward forward) {
-//
-//        int shotPower = forward.getShotPower();

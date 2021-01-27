@@ -8,18 +8,19 @@ public class Goalkeeper {
 
     private int leftUp = 45;
 
-    private int RightUp = 60;
+    private int rightUp = 60;
 
-    private int LeftDown = 55;
+    private int leftDown = 55;
 
-    private int RightDown = 70;
+    private int rightDown = 70;
 
-    private int Home = 40;
+    private int home = 40;
 
-    private int StandUp = 30;
+    private int standUp = 30;
 
-    private int Butterfly = 70;
+    private int butterfly = 70;
 
+    private String position;
 
     public int getSpeed() {
         return speed;
@@ -38,51 +39,60 @@ public class Goalkeeper {
     }
 
     public int getRightUp() {
-        return RightUp;
+        return rightUp;
     }
 
     public void setRightUp(int rightUp) {
-        RightUp = rightUp;
+        this.rightUp = rightUp;
     }
 
     public int getLeftDown() {
-        return LeftDown;
+        return leftDown;
     }
 
     public void setLeftDown(int leftDown) {
-        LeftDown = leftDown;
+        this.leftDown = leftDown;
     }
 
     public int getRightDown() {
-        return RightDown;
+        return rightDown;
     }
 
     public void setRightDown(int rightDown) {
-        RightDown = rightDown;
+        this.rightDown = rightDown;
     }
 
     public int getHome() {
-        return Home;
+        return home;
     }
 
     public void setHome(int home) {
-        Home = home;
+        this.home = home;
     }
 
     public int getStandUp() {
-        return StandUp;
+        return standUp;
     }
 
     public void setStandUp(int standUp) {
-        StandUp = standUp;
+        this.standUp = standUp;
     }
 
     public int getButterfly() {
-        return Butterfly;
+        return butterfly;
     }
 
     public void setButterfly(int butterfly) {
-        Butterfly = butterfly;
+        this.butterfly = butterfly;
+    }
+
+    public String getPosition() {
+        return position;
+    }
+
+    public void setPosition(String position) {
+        this.position = position;
     }
 }
+
 
