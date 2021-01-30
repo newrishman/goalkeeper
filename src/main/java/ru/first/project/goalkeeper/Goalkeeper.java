@@ -16,9 +16,9 @@ public class Goalkeeper {
 
     private int home = 40;
 
-    private int standUp = 30;
+    private int standUp = 30; //fixme зачем это?
 
-    private int butterfly = 70;
+    private int butterfly = 70; //fixme зачем это?
 
     private String position;
 
@@ -72,19 +72,19 @@ public class Goalkeeper {
 
     public int getStandUp() {
         return standUp;
-    }
+    } //fixme зачем это?
 
     public void setStandUp(int standUp) {
         this.standUp = standUp;
-    }
+    } //fixme зачем это?
 
     public int getButterfly() {
         return butterfly;
-    }
+    } //fixme зачем это?
 
     public void setButterfly(int butterfly) {
         this.butterfly = butterfly;
-    }
+    } //fixme зачем это?
 
     public String getPosition() {
         return position;
