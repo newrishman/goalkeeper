@@ -1,6 +1,6 @@
 package ru.first.project.goalkeeper;
 
-public class Рассчет {
+public class ForwardMechanics {
 
     public int RandomChance() {
 
@@ -11,7 +11,7 @@ public class Рассчет {
         return random;
     }
 
-    public int точностьНападения(Forward forward) {
+    public int strikerAccuracy(Forward forward) {
 
         int shotPower = forward.getShotPower();
 
@@ -23,39 +23,38 @@ public class Рассчет {
             return 0;
 
         }
-        int точность;
+        int accuracy;
 
         if (shotPower < 100 && shotPower > 75) {
 
-            точность = 25;
+            accuracy = 25;
 
         } else if (shotPower < 75 && shotPower > 50) {
 
-            точность = 50;
+            accuracy = 50;
 
         } else if (shotPower < 50 && shotPower > 25) {
 
-            точность = 75;
+            accuracy = 75;
 
         } else {
-            точность=100;
+            accuracy=100;
         }
-            return точность;
-        }
+        return accuracy;
+    }
 
 
 
-    public void Счет(int RandomChance, int точность) {
-        if (точность == 0 || RandomChance == 0) {
+    public void calculation(int RandomChance, int accuracy) {
+        if (accuracy == 0 || RandomChance == 0) {
 
             System.out.println("Ошибка вычесления");
             return;
         }
-        if ( RandomChance > точность ){
+        if ( RandomChance > accuracy ){
             System.out.println("Ты промахнулся");
         }else {
             System.out.println("Ты попал");
         }
     }
 }
-

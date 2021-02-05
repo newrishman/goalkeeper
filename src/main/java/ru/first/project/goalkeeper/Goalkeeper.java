@@ -16,10 +16,6 @@ public class Goalkeeper {
 
     private int home = 40;
 
-    private int standUp;
-
-    private int butterfly;
-
     private String position;
 
     public int getSpeed() {
