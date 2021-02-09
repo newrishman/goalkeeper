@@ -5,7 +5,7 @@ package ru.first.project.goalkeeper;
  */
 public class Forward {
     private int shotPower;
-    private int shorDirection;
+    private int shotDirection;
 
     public int getShotPower() {
         return shotPower;
@@ -15,11 +15,11 @@ public class Forward {
         this.shotPower = shotPower;
     }
 
-    public int getShorDirection() {
-        return shorDirection;
+    public int getShotDirection() {
+        return shotDirection;
     }
 
-    public void setShorDirection(int shorDirection) {
-        this.shorDirection = shorDirection;
+    public void setShotDirection(int shotDirection) {
+        this.shotDirection = shotDirection;
     }
 }

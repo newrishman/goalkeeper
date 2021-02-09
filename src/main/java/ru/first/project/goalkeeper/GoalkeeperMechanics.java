@@ -13,10 +13,10 @@ public class GoalkeeperMechanics {
 
         public Goalkeeper positionSelection(Goalkeeper goalkeeper) {
             int random = randomChance();
-            if (random <= 30) {
+            if (random <= 40) {
                 goalkeeper.setPosition("Butterfly");
             } else {
-                goalkeeper.setPosition("StanUp");
+                goalkeeper.setPosition("StandUp");
             }
             return goalkeeper;
         }

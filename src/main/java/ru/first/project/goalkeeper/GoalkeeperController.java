@@ -20,7 +20,11 @@ public class GoalkeeperController {
 
         System.out.println("Входной параметр силы броска: " + shotPower
                 + ", входной параметр направления броска: " + shotDirection);
-        // тут должен быть код, отдающий входные параметры и возвращающий результат
+        Forward forward=new Forward();
+        forward.setShotDirection(shotDirection);
+        forward.setShotPower(shotPower);
+
+        ForwardMechanics forwardMechanics=new ForwardMechanics();
 
 
         return "тут в итоге должен возвратиться результат";

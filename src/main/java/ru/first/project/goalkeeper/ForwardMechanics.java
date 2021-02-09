@@ -16,7 +16,7 @@ public class ForwardMechanics {
         int shotPower = forward.getShotPower();
 
 
-        if (shotPower < 0 || shotPower > 100) {
+        if (shotPower <= 0 || shotPower >= 100) {
 
             System.out.println("Ошибка");
 
