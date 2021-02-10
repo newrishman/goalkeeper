@@ -35,7 +35,7 @@ public class GoalkeeperMechanics {
             int speed = goalkeeper.getSpeed();
 
 
-            if (position==s1) {
+            if (position. equals(s1)) {
                 playHome = playHome + 10;
                 playLeftDown = playLeftDown + 10;
                 playRightDown = playRightDown + 10;
